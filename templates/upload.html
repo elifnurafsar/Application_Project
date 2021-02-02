@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>UPLOAD</title>
+</head>
+<body>
+    <h1>file uploader</h1>
+    <form id="upload-form" action="{{ url_for('upload') }}" method="POST" enctype="multipart/form-data">
+        <div class="form-group">
+            <label style="font-size:15px;"> Kumaş Türü </label>
+            <input type="text" class="form-control" name="tur" placeholder="Or: Dallas, Babyface ..." required="required" autofocus >
+        </div>
+        <div class="form-group">
+            <label style="font-size:15px;"> Kumaş Rengi </label>
+            <input type="text" class="form-control" name="renk" placeholder="Lutfen renk belirtiniz" required="required" autofocus >
+        </div>
+        <div class="form-group">
+            <label style="font-size:15px;"> Kumaş Deseni </label>
+            <input type="text" class="form-control" name="desen" placeholder="Lutfen desen belirtiniz" required="required" autofocus >
+        </div>
+        <div class="form-group">
+            <label style="font-size:15px;"> Kumaş Fiyatı </label>
+            <input type="number" class="form-control" name="fiyat" placeholder="Lutfen fiyat belirtiniz" required="required" autofocus >
+        </div>
+        <div class="form-group">
+            <label style="font-size:15px;"> Açıklama </label>
+            <input type="text" class="form-control" name="aciklama" placeholder="Aciklama..." required="required" autofocus >
+        </div>
+        <input type="file" name="file" accept="image\*" multiple>
+        <input type="submit" value="send">
+    </form>
+</body>
+</html>

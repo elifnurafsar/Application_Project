@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<style>
+    .logo-image{
+    width: 47px;
+    height: 47px;
+    border-radius: 50%;
+    overflow: hidden;
+    margin-top: -6px;
+}
+
+</style>
+<html>
+    <head>
+        <title>ALREN</title>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <meta http-equiv="X-UA-Compatible" content="ie=edge">
+        <title>Bootstrap 4 Introduction</title>
+        <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm"
+            crossorigin="anonymous">
+    </head>
+    <body>
+        <!-- Navigation -->
+        <nav class="navbar navbar-expand-lg navbar-dark bg-dark static-top">
+            <div class="container">
+            <a class="navbar-brand" href="#">
+                <div class="logo-image">
+                    <img src="{{ url_for('send_image', filename='image11.jpg') }}" >  
+                </div>
+            </a>
+            <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarResponsive" aria-controls="navbarResponsive" aria-expanded="false" aria-label="Toggle navigation">
+                    <span class="navbar-toggler-icon"></span>
+                </button>
+            <div class="collapse navbar-collapse" id="navbarResponsive">
+                <ul class="navbar-nav ml-auto">
+                <li class="nav-item active">
+                    <a class="nav-link" href="#">Ana Sayfa
+                        <span class="sr-only">(current)</span>
+                        </a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="{{ url_for('filter') }}">Filtrele</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="{{ url_for('iletisim') }}">İletişim</a>
+                </li>
+                </ul>
+            </div>
+            </div>
+        </nav>
+        <!-- Main section start -->
+        <div id="list-wrapper" class="card" style="margin: 0 auto;">
+            <table class="table table-hover">
+                <thead>
+                <tr>
+                    <th scope="col">On izleme </th>
+                    <th scope="col">Renk</th>
+                    <th scope="col">Tur</th>
+                    <th scope="col">Desen</th>
+                    <th scope="col">Fiyat</th>
+                </tr>
+                </thead>
+            </table>
+        </div>
+        <div>
+            {{image_names}}
+            {% for image in image_names %}
+                <img src="{{ url_for('send_image', filename=image) }}">
+            {% endfor %}
+        </div>
+    </body>
+</html>
+       

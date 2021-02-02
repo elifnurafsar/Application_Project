@@ -1,0 +1,171 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Filtreleme</title>
+</head>
+<style>
+
+    .header-title
+    {
+      text-align: center;
+      color:#00bfff;
+    }
+
+
+
+    .second-portion
+    {
+        margin-top:50px; 
+    }
+
+    @import "//netdna.bootstrapcdn.com/font-awesome/4.0.3/css/font-awesome.min.css";
+    @import "http://fonts.googleapis.com/css?family=Roboto:400,500";
+
+    .box > .icon { text-align: center; position: relative; }
+    .box > .icon > .image { position: relative; z-index: 2; margin: auto; width: 88px; height: 88px; border: 8px solid white; line-height: 88px; border-radius: 50%; background: #00bfff; vertical-align: middle; }
+    .box > .icon:hover > .image { background: #333; }
+    .box > .icon > .image > i { font-size: 36px !important; color: #fff !important; }
+    .box > .icon:hover > .image > i { color: white !important; }
+    .box > .icon > .info { margin-top: -24px; background: rgba(0, 0, 0, 0.04); border: 1px solid #e0e0e0; padding: 15px 0 10px 0; min-height:163px;}
+    .box > .icon:hover > .info {margin-top: 10px; background: rgba(0, 0, 0, 0.04); border-color: #e0e0e0; color: white; }
+    .box > .icon > .info > h3.title {margin-top: 15px; font-family: "Robot",sans-serif !important; font-size: 16px; color: #222; font-weight: 700; }
+    .box > .icon > .info > p {margin-top: 20px; font-family: "Robot",sans-serif !important; font-size: 13px; color: #666; line-height: 1.5em; margin: 20px;}
+    .box > .icon:hover > .info > h3.title, .box > .icon:hover > .info > p, .box > .icon:hover > .info > .more > a { color: #222; }
+    .box > .icon > .info > .more a { font-family: "Robot",sans-serif !important; font-size: 12px; color: #222; line-height: 12px; text-transform: uppercase; text-decoration: none; }
+    .box > .icon:hover > .info > .more > a { color: #fff; padding: 6px 8px; background-color: #63B76C; }
+    .box .space { height: 30px; }
+
+    @media only screen and (max-width: 768px)
+    {
+        .second-portion
+        {
+            margin-top:25px; 
+        }
+    }
+    .logo-image{
+    width: 47px;
+    height: 47px;
+    border-radius: 50%;
+    overflow: hidden;
+    margin-top: 6px;
+    }
+</style>
+
+<head>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">  
+    <link href="//netdna.bootstrapcdn.com/bootstrap/3.0.0/css/bootstrap.min.css" rel="stylesheet" id="bootstrap-css">
+    <script src="//netdna.bootstrapcdn.com/bootstrap/3.0.0/js/bootstrap.min.js"></script>
+    <script src="//code.jquery.com/jquery-1.11.1.min.js"></script>  
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Bootstrap 4 Introduction</title>
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm"
+            crossorigin="anonymous">
+</head>
+<body>
+     <!-- Navigation -->
+     <nav class="navbar navbar-expand-lg navbar-dark bg-dark static-top">
+        <div class="container">
+        <a class="navbar-brand" href="#">
+            <div class="logo-image">
+                <img src="{{ url_for('send_image', filename='image14.svg') }}" >
+            </div>
+        </a>
+        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarResponsive" aria-controls="navbarResponsive" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+        <div class="collapse navbar-collapse" id="navbarResponsive">
+            <ul class="navbar-nav ml-auto">
+            <li class="nav-item active">
+                <a class="nav-link" href="{{ url_for('index') }}">Ana Sayfa
+                    <span class="sr-only">(current)</span>
+                    </a>
+            </li>
+            <li class="nav-item">
+                <a class="nav-link" href="{{ url_for('filter') }}">Filtrele</a>
+            </li>
+            <li class="nav-item">
+                <a class="nav-link" href="#">İletişim</a>
+            </li>
+            </ul>
+        </div>
+        </div>
+    </nav>
+<div class="container animated fadeIn">
+</body>
+<body>
+  <div class="row">
+    <h1 class="header-title"> İLETİŞİM </h1>
+    <hr>
+        <div class="col-sm-12" id="parent">
+            <div class="col-sm-6">
+                <iframe src="https://www.google.com/maps/embed/v1/streetview?location=51.398734,-2.3936212&fov=80&heading=70&pitch=0&key=YOUR_API_KEY" width="600" height="450" frameborder="0" style="border:0;" allowfullscreen=""></iframe>
+            </div>
+        </div>
+    </hr>
+  </div>
+
+  <div class="container second-portion">
+	<div class="row">
+        <!-- Boxes de Acoes -->
+    	<div class="col-xs-12 col-sm-6 col-lg-4">
+			<div class="box">							
+				<div class="icon">
+					<div class="image"><i class="fa fa-envelope" aria-hidden="true"></i></div>
+					<div class="info">
+						<h3 class="title">MAIL</h3>
+						<p>
+							<i class="fa fa-envelope" aria-hidden="true"></i> &nbsp eafsar@etu.edu.tr
+							<br>
+							<br>
+							<i class="fa fa-globe" aria-hidden="true"></i> &nbsp mrfeelinold@gmail.com
+						</p>
+					
+					</div>
+				</div>
+				<div class="space"></div>
+			</div> 
+		</div>
+			
+        <div class="col-xs-12 col-sm-6 col-lg-4">
+			<div class="box">							
+				<div class="icon">
+					<div class="image"><i class="fa fa-mobile" aria-hidden="true"></i></div>
+					<div class="info">
+						<h3 class="title">CONTACT</h3>
+    					<p>
+							<i class="fa fa-mobile" aria-hidden="true"></i> &nbsp (+90)5457790400
+							<br>
+							<br>
+							<i class="fa fa-mobile" aria-hidden="true"></i> &nbsp  (+90)5559645465
+						</p>
+					</div>
+				</div>
+				<div class="space"></div>
+			</div> 
+		</div>
+			
+        <div class="col-xs-12 col-sm-6 col-lg-4">
+			<div class="box">							
+				<div class="icon">
+					<div class="image"><i class="fa fa-map-marker" aria-hidden="true"></i></div>
+					<div class="info">
+						<h3 class="title">ADRES</h3>
+    					<p>
+							 <i class="fa fa-map-marker" aria-hidden="true"></i> &nbsp Siteler Ankara
+						</p>
+					</div>
+				</div>
+				<div class="space"></div>
+			</div> 
+		</div>		    
+		<!-- /Boxes de Acoes -->
+		
+		<!--My Portfolio  dont Copy this -->
+	    
+	</div>
+</div>
+
+</div>
+</body>
